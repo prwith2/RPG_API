@@ -51,9 +51,9 @@ namespace RpgApi.Controllers
         }
         [HttpPost("PostValidacao")]
         public IActionResult PostValidacao(Personagem personagem){
-            if (personagem.Defesa < 10 || personagem.Inteligencia < 30)
+            if (personagem.Defesa < 10 || personagem.Inteligencia > 30)
             {
-                return BadRequest(new { mensagem = "Personagem não tem os valores nescessários para ser adcionado"});
+                return BadRequest(new { mensagem = "Personagem não tem os valores nescessários para ser adicionado"});
             }else{
                 personagens.Add(personagem);
                 return Ok(personagens);
@@ -63,7 +63,7 @@ namespace RpgApi.Controllers
         public IActionResult PostValidacaoMago(Personagem personagem){
             if(personagem.Classe == ClasseEnum.Mago){
                 if(personagem.Inteligencia < 35){
-                    return BadRequest(new { mensagem = "Personagem não tem os valores nescessários para ser adcionado"});
+                    return BadRequest(new { mensagem = "Personagem não tem os valores nescessários para ser adicionado"});
                 }else{
                     personagens.Add(personagem);
                     return Ok();
@@ -73,9 +73,11 @@ namespace RpgApi.Controllers
             }
         }
         [HttpGet("GetByClasse/{idClasse}")]
-        public IActionResult GetByClasse(int idClasse)
+        public IActionResult GetByClasse(int IdClasse)
         {
-            var lista = personagens.Where(p => (int)p.Classe == idClasse).ToList();
+            ClasseEnum tipoEnum = (ClasseEnum)IdClasse;
+
+            var lista = personagens.Where(p => (int)p.Classe == IdClasse).ToList();
             return Ok(lista);
         }
     }

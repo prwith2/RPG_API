@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prste\\Downloads\\RPG_API-main\\RPG_API-main\\RpgApi.csproj": {}
+    "C:\\RPG_API\\RPG_API-main\\RpgApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prste\\Downloads\\RPG_API-main\\RPG_API-main\\RpgApi.csproj": {
+    "C:\\RPG_API\\RPG_API-main\\RpgApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prste\\Downloads\\RPG_API-main\\RPG_API-main\\RpgApi.csproj",
+        "projectUniqueName": "C:\\RPG_API\\RPG_API-main\\RpgApi.csproj",
         "projectName": "RpgApi",
-        "projectPath": "C:\\Users\\prste\\Downloads\\RPG_API-main\\RPG_API-main\\RpgApi.csproj",
+        "projectPath": "C:\\RPG_API\\RPG_API-main\\RpgApi.csproj",
         "packagesPath": "C:\\Users\\prste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prste\\Downloads\\RPG_API-main\\RPG_API-main\\obj\\",
+        "outputPath": "C:\\RPG_API\\RPG_API-main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,16 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
